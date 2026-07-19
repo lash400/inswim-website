@@ -329,6 +329,9 @@ figure.plate figcaption{ font-family:var(--mono); font-size:11px; color:var(--mu
   max-width:34ch; }
 .footer .f-list{ display:grid; gap:9px; }
 .footer .f-note{ color:var(--night-muted); font-size:13px; }
+.footer .f-invite{ margin:0 0 14px; font-size:13.5px; line-height:1.7; }
+.footer .f-invite a{ color:var(--night-ink); }
+.footer .f-invite a:hover{ color:var(--night-gold); }
 .footer-bottom{ position:relative; border-top:1px solid rgba(169,195,201,.2);
   padding:18px 24px; text-align:center; color:var(--night-muted); font-size:12.5px; }
 .footer .f-cta{ display:inline-flex; margin-top:6px; background:var(--night-gold);
