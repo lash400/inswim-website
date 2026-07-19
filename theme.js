@@ -27,5 +27,27 @@
       try { localStorage.setItem("inswim-theme", next); } catch (e) {}
       sync();
     });
+
+    // 手機漢堡選單
+    var toggle = document.querySelector(".nav-toggle");
+    var links = document.querySelector(".nav-links");
+    if (toggle && links) {
+      function setOpen(open) {
+        links.classList.toggle("open", open);
+        toggle.setAttribute("aria-expanded", open ? "true" : "false");
+        toggle.textContent = open ? "✕" : "☰";
+      }
+      toggle.addEventListener("click", function () {
+        setOpen(!links.classList.contains("open"));
+      });
+      // 點選單內連結後收合
+      links.querySelectorAll("a").forEach(function (a) {
+        a.addEventListener("click", function () { setOpen(false); });
+      });
+      // 視窗放大回桌機寬度時，清除展開狀態
+      window.matchMedia("(min-width: 821px)").addEventListener("change", function (e) {
+        if (e.matches) setOpen(false);
+      });
+    }
   });
 })();

@@ -109,9 +109,8 @@ strong{ font-weight:700; }
 .brand{ display:flex; align-items:center; gap:10px; color:var(--ink);
   text-decoration:none; flex:none; }
 .brand:hover{ text-decoration:none; }
-.logo{ display:inline-block; background-color:var(--ink);
-  -webkit-mask:url(assets/inswim-logo.svg) center/contain no-repeat;
-  mask:url(assets/inswim-logo.svg) center/contain no-repeat; }
+.logo{ display:inline-block; color:var(--ink); vertical-align:middle; }
+.logo path{ fill:currentColor; }
 .brand .logo{ width:34px; height:34px; }
 .brand .wordmark{ font-weight:700; font-size:18px; letter-spacing:.02em; }
 .brand .wordmark small{ display:block; font-weight:400; font-size:11px;
@@ -128,6 +127,12 @@ strong{ font-weight:700; }
   border-radius:2px; width:32px; height:32px; cursor:pointer; font-size:15px;
   display:inline-flex; align-items:center; justify-content:center; }
 .theme-toggle:hover{ border-color:var(--ink); color:var(--ink); }
+/* 漢堡選單按鈕（桌機隱藏，手機顯示） */
+.nav-toggle{ display:none; margin-left:auto; background:none;
+  border:1px solid var(--grid); color:var(--ink); border-radius:2px;
+  width:42px; height:42px; font-size:20px; line-height:1; cursor:pointer;
+  align-items:center; justify-content:center; }
+.nav-toggle:hover{ border-color:var(--ink); }
 /* 導覽下緣刻度尺 */
 .nav-ruler{ height:8px; width:100%;
   background-image:
@@ -323,7 +328,7 @@ figure.plate figcaption{ font-family:var(--mono); font-size:11px; color:var(--mu
   margin:0 0 14px; }
 .footer a{ color:var(--night-ink); font-size:14.5px; }
 .footer a:hover{ color:var(--night-gold); }
-.footer .f-brand .logo{ width:40px; height:40px; background-color:var(--night-ink);
+.footer .f-brand .logo{ width:40px; height:40px; color:var(--night-ink);
   margin-bottom:14px; }
 .footer .f-brand p{ color:var(--night-muted); font-size:13.5px; line-height:1.8;
   max-width:34ch; }
@@ -359,16 +364,27 @@ hr.rule{ border:none; border-top:1px solid var(--grid); margin:0; }
 /* ---------- RWD ---------- */
 @media (max-width:900px){
   :root{ --gutter:64px; }
-  .hero-inner{ grid-template-columns:1fr; gap:28px; padding-top:48px; }
-  .hero-fig{ order:-1; }
+  .hero-inner{ grid-template-columns:1fr; gap:28px; padding-top:40px; }
   .cards.c3,.cards.c5{ grid-template-columns:repeat(2,1fr); }
   .footer-inner{ grid-template-columns:1fr 1fr; }
   .honest{ grid-template-columns:1fr; }
 }
+/* 手機導覽：漢堡下拉選單 */
+@media (max-width:820px){
+  .nav-toggle{ display:inline-flex; }
+  .nav-links{ position:absolute; top:100%; left:0; right:0; margin:0;
+    flex-direction:column; align-items:stretch; gap:0; flex-wrap:nowrap;
+    background:var(--paper); border-bottom:1px solid var(--grid);
+    padding:6px 0 10px; display:none; z-index:45;
+    box-shadow:0 12px 26px rgba(0,0,0,.16); }
+  .nav-links.open{ display:flex; }
+  .nav-links a{ padding:14px 24px; font-size:16px; }
+  .nav-links a.navbtn{ margin:10px 24px 4px; text-align:center; padding:13px; font-size:15px; }
+  .nav-links .theme-toggle{ margin:10px 24px 0; width:44px; height:40px; }
+}
 @media (max-width:640px){
   body{ font-size:16px; }
-  .nav-links{ gap:14px; }
-  .nav-links .nav-hide{ display:none; }
+  h1{ font-size:clamp(25px,7vw,34px); }
   .cards.c2,.cards.c3,.cards.c5{ grid-template-columns:1fr; }
   .titleblock{ grid-template-columns:1fr; }
   .titleblock .tb-row{ border-right:none; }
