@@ -196,10 +196,16 @@ strong{ font-weight:700; }
 
 /* 3E 三卡 */
 .threeE .card{ padding:26px 24px; }
-.threeE .e-mark{ font-family:var(--serif); font-size:15px; color:var(--teal);
-  letter-spacing:.06em; margin-bottom:10px; }
-.threeE .e-mark b{ font-size:28px; font-weight:700; color:var(--ink); margin-right:8px; }
+.threeE .e-word{ font-family:var(--serif); font-weight:700; font-size:26px;
+  color:var(--teal); letter-spacing:.01em; line-height:1; margin-bottom:12px; }
+.threeE .e-word .e-cap{ color:var(--ink); }
 .threeE h3{ font-size:19px; }
+/* 3E 區塊標題 */
+.threeE-title{ font-weight:700; font-size:clamp(23px,3.2vw,30px);
+  color:var(--ink); margin:0 0 22px; letter-spacing:.01em; }
+.threeE-title .e3{ font-family:var(--serif); font-size:1.18em; margin-right:4px; }
+.threeE-title .e3 .d{ color:var(--teal); }
+.threeE-title .e3 .e{ color:var(--ink); }
 
 /* 五關鍵字字卡 */
 .keychars{ display:flex; gap:14px; flex-wrap:wrap; }
