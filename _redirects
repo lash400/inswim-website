@@ -1,0 +1,8 @@
+# Cloudflare Pages 轉址規則
+# 正式網址是不帶 www 的 https://inswim.tw/，www 版一律 301 導回主網址。
+# 需先在 Cloudflare Pages 專案的自訂網域同時加入 inswim.tw 與 www.inswim.tw，本規則才會生效。
+
+https://www.inswim.tw/* https://inswim.tw/:splat 301
+
+# 日後若調整頁面網址，在下方逐行補上舊網址的導向，避免既有連結失效，例如：
+# /article-018 /articles/rhythm-3sec 301

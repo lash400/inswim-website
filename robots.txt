@@ -1,2 +1,8 @@
+# InSwim 官網 robots.txt
+#
+# 目前狀態：網站尚未正式上線，全站禁止索引。
+# 上線當天執行 python3 scripts/build_site_meta.py --publish
+# 會自動改寫本檔為開放索引，並移除各頁的 noindex 標籤。
+
 User-agent: *
 Disallow: /
