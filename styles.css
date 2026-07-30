@@ -112,7 +112,7 @@ strong{ font-weight:700; }
 .logo{ display:inline-block; color:var(--ink); vertical-align:middle; }
 .logo path{ fill:currentColor; }
 .brand .logo{ width:96px; height:26px; }
-.brand .wordmark{ font-weight:700; font-size:18px; letter-spacing:.02em; }
+.brand .wordmark{ font-weight:700; font-size:21px; letter-spacing:.02em; }
 .brand .wordmark small{ display:block; font-weight:400; font-size:11px;
   letter-spacing:.28em; color:var(--muted); margin-top:1px; }
 .nav-links{ margin-left:auto; display:flex; align-items:center; gap:22px; flex-wrap:wrap; }
