@@ -1,0 +1,10 @@
+{
+  // Cloudflare Workers 靜態資產部署設定。
+  // name 必須與 Cloudflare 後台的專案名稱一致，改名會另外建出一個新的 Worker。
+  // 本網站無建置步驟，repo 根目錄即為網站根目錄。
+  "name": "inswim-website",
+  "compatibility_date": "2026-07-31",
+  "assets": {
+    "directory": "./"
+  }
+}
