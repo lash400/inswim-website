@@ -3,3 +3,6 @@
 .assetsignore
 wrangler.jsonc
 README.md
+
+# 分享圖原始檔，實際使用的是壓縮後的 inswim-og.jpg，PNG 保留在 repo 供日後重製
+assets/inswim-og.png
