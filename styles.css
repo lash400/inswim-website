@@ -355,6 +355,24 @@ figure.plate figcaption{ font-family:var(--mono); font-size:11px; color:var(--mu
 .pagehead h1{ margin:0 0 12px; }
 .pagehead .sub{ font-size:16px; color:var(--muted); max-width:52ch; }
 
+/* ---------- 影片區塊 ---------- */
+.videoblock{ margin:0; border:1px solid var(--grid); border-radius:3px;
+  overflow:hidden; background:var(--night); }
+.videoblock iframe{ display:block; width:100%; aspect-ratio:16/9; border:0;
+  background:var(--night); }
+.videoblock figcaption{ background:var(--card); border-top:1px solid var(--grid);
+  padding:13px 18px; font-size:13.5px; line-height:1.8; color:var(--muted); }
+.videoblock figcaption .mono{ font-size:12.5px; letter-spacing:.04em; color:var(--ink); }
+
+/* ---------- 購書通路 ---------- */
+.shoplinks{ display:flex; flex-wrap:wrap; gap:10px; align-items:stretch; }
+.shoplinks a:not(.btn){ display:inline-flex; align-items:center;
+  border:1px solid var(--grid); background:var(--card); color:var(--ink);
+  padding:11px 18px; border-radius:2px; font-size:15px;
+  transition:border-color .15s; }
+.shoplinks a:not(.btn):hover{ border-color:var(--ink); text-decoration:none; }
+.pubmeta{ margin-top:18px; font-size:12.5px; letter-spacing:.04em; color:var(--muted); }
+
 /* ---------- 雜項 ---------- */
 .note-band{ background:var(--card); border:1px solid var(--grid); border-radius:3px;
   padding:16px 20px; font-size:14px; color:var(--muted); }
